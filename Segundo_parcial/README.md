@@ -24,11 +24,44 @@ $$ \Delta m= \frac{\sqrt{n}\epsilon}{\sqrt{n\sum_{k=1}^n{x_k^2}-(\sum_{k=1}^n{x_
 
 $$ \Delta b= \frac{\epsilon}{\sqrt{n}} $$
 
+Para la respuesta final se usa propagación de errores en la ecuación lineal.
+
 **3. Variables**
+
+Entrada
+ - *altura[]* arreglo que guarda los valores de estatura del proceso experrimental
+ - *peso[]* arreglo que guarda los valores de peso del proceso experimental
+ - *n* número de elementos que contienen los arreglos
+ - *erorx* error expperimental de las alturas
+ - *errorm* varible que guarda el error de m
+ - *errorb* varible que guarda el error de b
+ - *m* varible que guarda el valor de m, pendiente de la recta del crecimiento
+ - *r*  coeficiente de determinación por el metodo de minimos cuadrados
+ - *estatura* variable que gurada la altura ingresada por el ususario
+
+Salida
+ - *pesoEst* varible que regresa el peso en función de la altura ingresada
+ - *errpesoEst* error del calculo del peso estimado
+ - texto de *Altura ingresada inválida*
 
 **4. Diagrama de flujo**
 
+![Diagrama1](diagrama1.jpg)
+
 **5. Solución**
+
+Para encontrar la recta que describe el crecimiento se utilizó el método de minimos cuadrados, el programa nos devuelve la función del peso en base a la altura con su respectivo margen de error. En la siguiente grafica se encuentra la distribución de los datos experimentales y la recta que se ajusta al crecimiento.
+
+![Problema1](pesoAltura.jpg)
+
+Con la función ya obtenida el usuario puede ingresar una altura en metros y se estima el peso adecuado.
+
+COMPILADO Y EJECUCION:
+
+```
+$ gcc -o pesoAltura.out pesoAltura.c -lm
+$ ./pesoAltura.out
+```
 
 ## Problema 2
 ### Newton Raphson:
@@ -60,8 +93,11 @@ Entrada
 
 Salida
  - *sol* variable que devuelve la solucion del problema
+ - mensaje *No hay solucion despues de n iteraciones*
 
 **4. Diagrama de flujo**
+
+![Diagrama2](diagramanewton.jpg)
 
 **5. Solución**
 
