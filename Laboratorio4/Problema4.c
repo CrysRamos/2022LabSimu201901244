@@ -234,7 +234,7 @@ void inversa(int m[n][n],float det){
         }
         
     }
-    imprimir(inversa);
+    imprimirf(inversa);
     
     
 }
